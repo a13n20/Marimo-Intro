@@ -1,4 +1,4 @@
-# Marimo-Intro
+# Marimo Intro
 
 ## How to Install
 
