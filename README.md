@@ -31,4 +31,7 @@ Due to Marimo's reactivity, global variables **must all have unique names.** The
 
 ### Explore Variables
 
-Marimo has an "Explore Variables" tab, where you can easily reference all the variables that have been previously declared. Along with the variable name, it shows the type and value
+Marimo has an "Explore Variables" tab, where you can easily reference all the variables that have been previously declared. Along with the variable name, it shows the type and value. There are also links to all the cells the variable is used and to the cell where the variable is declared.
+
+![Example](https://github.com/a13n20/Marimo-Intro/blob/17fe6f6e87dc98be2a50d708c5c1e516f177e816/variables.png)
+
