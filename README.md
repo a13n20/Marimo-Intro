@@ -5,7 +5,7 @@
 ```console
 pip install marimo
 ```
-If you have Python3 installed then use pip3
+If you have Python3 then use pip3
 
 ## What is Marimo?
 
