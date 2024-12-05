@@ -32,6 +32,7 @@ mo.md(
     """
 )
 ```
+The slider has to be defined in a separate cell from the one it's used in because of the risk of circular dependencies in UI elements. Both the slider's value and the slider's creation depend on the kernel, so the kernel can't decide the proper order of execution.
 
 ### Order doesn't matter
 
@@ -44,22 +45,6 @@ Cells don't need to be in any specific order. Marimo takes the order of operatio
 Due to Marimo's reactivity, global variables **must all have unique names.** The kernel will not allow you to re-declare a variable. You can only permanently modify an existing variable by changing the original declaration value or assigning it to a new renamed variable.
 
 ![Example](https://github.com/a13n20/Marimo-Intro/blob/57db6ad2c0b72f087493378cbbc7ed1bb3d8d0f2/variable_nameing.gif)
-
-### Raw Strings
-
-There's a way to make inline math equations, which would make note taking a lot easier.
-
-```console
-mo.md(
-    r'''
-    The exponential function $f(x) = e^x$ can be represented as
-
-    \[
-        f(x) = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots.
-    \]
-    '''
-)
-```
 
 ## Converting
 
