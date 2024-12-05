@@ -17,6 +17,22 @@ Reactive refers to the kernel's ability to run all related cells automatically w
 
 ![Example](https://github.com/a13n20/Marimo-Intro/blob/17fe6f6e87dc98be2a50d708c5c1e516f177e816/reactive.gif)
 
+Reactive also means that UI elements update automatically when using them.
+
+You can create a slider, and it will update the output as you slide it without needing to manually run the cell.
+
+```console
+slider = mo.ui.slider(1, 22)
+```
+```console
+mo.md(
+    f"""
+    {slider}
+    {"##" + "🎵" * slider.value}
+    """
+)
+```
+
 ### Order doesn't matter
 
 Cells don't need to be in any specific order. Marimo takes the order of operation into account, so any cell referencing a variable will always run after the declaration of the variable.
@@ -28,6 +44,22 @@ Cells don't need to be in any specific order. Marimo takes the order of operatio
 Due to Marimo's reactivity, global variables **must all have unique names.** The kernel will not allow you to re-declare a variable. You can only permanently modify an existing variable by changing the original declaration value or assigning it to a new renamed variable.
 
 ![Example](https://github.com/a13n20/Marimo-Intro/blob/57db6ad2c0b72f087493378cbbc7ed1bb3d8d0f2/variable_nameing.gif)
+
+### Raw Strings
+
+There's a way to make inline math equations, which would make note taking a lot easier.
+
+```console
+mo.md(
+    r'''
+    The exponential function $f(x) = e^x$ can be represented as
+
+    \[
+        f(x) = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots.
+    \]
+    '''
+)
+```
 
 ## Converting
 
